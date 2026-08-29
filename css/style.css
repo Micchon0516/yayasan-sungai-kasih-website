@@ -208,7 +208,7 @@ section { position: relative; }
   transition: transform .3s var(--ease), opacity .3s var(--ease);
 }
 .mobile-nav.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-.mobile-nav a { display: block; padding: 14px 4px; font-size: 17px; font-weight: 600; color: var(--navy-900); border-bottom: 1px solid rgba(13,36,57,.08); }
+.mobile-nav a:not(.btn) { display: block; padding: 14px 4px; font-size: 17px; font-weight: 600; color: var(--navy-900); border-bottom: 1px solid rgba(13,36,57,.08); }
 .mobile-nav .btn { margin-top: 16px; }
 
 /* ============================================================
@@ -631,17 +631,29 @@ section { position: relative; }
 @media (max-width: 1080px) {
   .about-grid, .disaster-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-copy { margin-top: 0; }
+  .about-photo { max-width: 560px; margin-left: auto; margin-right: auto; }
   .disaster-grid.reverse .disaster-copy, .disaster-grid.reverse .disaster-visual { order: unset; }
   .program-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .detail-strip { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .news-media { width: 220px; }
+  .news-body { padding: 24px 26px; }
+}
+
+/* "Desktop mode" on phones (~900-1180px): nav-desktop still shows but is
+   too tight for all items + CTA button, so switch to hamburger earlier. */
+@media (max-width: 1180px) and (min-width: 861px) {
+  .nav-desktop { display: none; }
+  .hamburger { display: flex; }
+  .mobile-nav { display: block; }
+  .header-actions .btn-navy.desktop-only { display: none; }
 }
 
 @media (max-width: 860px) {
-  .hero-grid { grid-template-columns: 1fr; padding-bottom: 50px; }
-  .hero-visual { order: -1; max-width: 420px; margin: 0 auto; }
+  .hero-grid { grid-template-columns: 1fr; padding-bottom: 64px; }
+  .hero-visual { max-width: 420px; margin: 32px auto 0; }
   .nav-desktop { display: none; }
   .hamburger { display: flex; }
   .mobile-nav { display: block; }
