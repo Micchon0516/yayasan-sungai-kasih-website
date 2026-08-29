@@ -248,7 +248,7 @@ section { position: relative; }
 .poster-badge {
   position: absolute;
   left: -18px;
-  bottom: -22px;
+  top: -22px;
   background: var(--gold-500);
   color: #2a1c04;
   padding: 20px 24px;
@@ -661,7 +661,7 @@ section { position: relative; }
   .footer-bottom { flex-direction: column; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-card { padding: 30px 24px; }
-  .poster-badge { max-width: 170px; font-size: 15px; padding: 14px 16px; left: -8px; bottom: -16px; }
+  .poster-badge { max-width: 170px; font-size: 15px; padding: 14px 16px; left: -8px; top: -16px; }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .hero-cta .btn { justify-content: center; }
 }
