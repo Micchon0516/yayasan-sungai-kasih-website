@@ -592,8 +592,10 @@ section { position: relative; }
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 14px 30px -10px rgba(0,0,0,.4);
   z-index: 150;
-  transition: transform .25s ease;
+  opacity: 0; pointer-events: none; transform: translateY(10px);
+  transition: transform .25s ease, opacity .3s ease;
 }
+.fab-wa.is-shown { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .fab-wa:hover { transform: scale(1.08); }
 .fab-wa svg { width: 27px; height: 27px; color: #fff; }
 
