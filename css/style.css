@@ -397,7 +397,7 @@ section { position: relative; }
 /* ---------- Berita & Kegiatan (news cards) ----------
    Satu format kartu untuk semua update — tinggal duplikat <article> di HTML
    untuk menambah berita baru, tidak perlu sentuh CSS ini. */
-.news-list { display: flex; flex-direction: column; gap: 22px; max-width: 900px; }
+.news-list { display: flex; flex-direction: column; gap: 22px; }
 .news-card {
   display: flex;
   background: var(--paper);
