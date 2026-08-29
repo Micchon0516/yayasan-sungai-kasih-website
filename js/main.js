@@ -7,6 +7,7 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   const fabTop = document.getElementById("fabTop");
+  const fabWa = document.getElementById("fabWa");
 
   /* ---------------- Header scroll state + height var ---------------- */
   const header = document.getElementById("siteHeader");
@@ -19,6 +20,7 @@
   function onScroll() {
     header.classList.toggle("is-scrolled", window.scrollY > 8);
     fabTop.classList.toggle("is-shown", window.scrollY > 600);
+    if (fabWa) fabWa.classList.toggle("is-shown", window.scrollY > 500);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
