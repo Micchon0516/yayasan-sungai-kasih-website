@@ -43,6 +43,16 @@
   });
   mobileNav.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMobileNav));
 
+  /* ---------------- Mobile accordion (Tentang Kami / Program Pelayanan) ---------------- */
+  document.querySelectorAll(".mobile-accordion-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const item = trigger.closest(".mobile-accordion");
+      const willOpen = !item.classList.contains("is-open");
+      document.querySelectorAll(".mobile-accordion.is-open").forEach((el) => el.classList.remove("is-open"));
+      item.classList.toggle("is-open", willOpen);
+    });
+  });
+
   /* ---------------- Active nav link on scroll ---------------- */
   const navLinks = document.querySelectorAll("[data-nav]");
   const sections = Array.from(navLinks)
@@ -179,6 +189,20 @@
       window.open(waUrl, "_blank", "noopener");
     });
   }
+
+  /* ---------------- Blog card "Baca Selengkapnya" toggle ---------------- */
+  document.querySelectorAll(".blog-card-more").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".blog-card");
+      const detail = card.querySelector(".blog-card-detail");
+      if (!detail) return;
+      const willOpen = !detail.classList.contains("open");
+      detail.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", String(willOpen));
+      btn.lastChild.textContent = willOpen ? " Tutup" : " Baca Selengkapnya";
+      if (!willOpen) card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+  });
 
   /* ---------------- Back to top ---------------- */
   fabTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));

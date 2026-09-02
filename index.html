@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Yayasan Sungai Kasih: Melayani dengan Kasih, Menumbuhkan Harapan" />
 <meta property="og:description" content="Mendampingi anak, keluarga, dan komunitas Indonesia melalui pendidikan, pelayanan sosial, dan respons bencana." />
-<meta property="og:image" content="assets/img/poster-gempa-flores.jpg" />
+<meta property="og:image" content="assets/img/hero-poster.jpg" />
 <meta property="og:locale" content="id_ID" />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23123156'/%3E%3Cpath d='M15 40c10-9 20-9 30 0s20 9 30 0 10-9 10-9' stroke='%232f9c93' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3Cpath d='M15 60c10-9 20-9 30 0s20 9 30 0 10-9 10-9' stroke='%23e5ab49' stroke-width='7' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
@@ -29,21 +29,33 @@
 <header class="site-header" id="siteHeader">
   <div class="container">
     <a href="#top" class="brand" aria-label="Beranda Yayasan Sungai Kasih">
-      <img src="assets/img/logo.svg" width="40" height="30" alt="" />
+      <img src="assets/img/logo-mark.png" width="64" height="21" alt="" />
       <span class="brand-word"><span class="l1">Yayasan</span><span class="l2">SUNGAI KASIH</span></span>
     </a>
 
     <nav class="nav-desktop" aria-label="Navigasi utama">
-      <a href="#tentang" data-nav>Tentang kami</a>
-      <a href="#program" data-nav>Program</a>
-      <a href="#berita" data-nav>Berita &amp; Kegiatan</a>
-      <a href="#pencapaian" data-nav>Pencapaian</a>
-      <a href="#dokumentasi" data-nav>Dokumentasi</a>
-      <a href="#kontak" data-nav>Kontak</a>
+      <a href="index.html" class="is-active">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger">Tentang Kami <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="tentang-kami.html#sejarah">Sejarah</a>
+          <a href="tentang-kami.html#visi-misi">Visi &amp; Misi</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger">Program Pelayanan <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="program.html#rumah-kasih">Rumah Kasih</a>
+          <a href="program.html#rumah-ceria">Rumah Ceria</a>
+          <a href="misi-kemanusiaan.html">Misi Kemanusiaan</a>
+        </div>
+      </div>
+      <a href="testimoni.html">Testimoni</a>
+      <a href="kontak.html">Kontak &amp; Donasi</a>
     </nav>
 
     <div class="header-actions">
-      <a href="#kontak" class="btn btn-navy desktop-only">
+      <a href="kontak.html" class="btn btn-navy desktop-only">
         Dukung gerakan
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
@@ -54,13 +66,25 @@
   </div>
 
   <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi mobile">
-    <a href="#tentang" data-nav>Tentang kami</a>
-    <a href="#program" data-nav>Program</a>
-    <a href="#berita" data-nav>Berita &amp; Kegiatan</a>
-    <a href="#pencapaian" data-nav>Pencapaian</a>
-    <a href="#dokumentasi" data-nav>Dokumentasi</a>
-    <a href="#kontak" data-nav>Kontak</a>
-    <a href="#kontak" class="btn btn-navy btn-block">Dukung gerakan</a>
+    <a href="index.html">Home</a>
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-trigger">Tentang Kami <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mobile-accordion-panel">
+        <a href="tentang-kami.html#sejarah">Sejarah</a>
+        <a href="tentang-kami.html#visi-misi">Visi &amp; Misi</a>
+      </div>
+    </div>
+    <div class="mobile-accordion">
+      <button class="mobile-accordion-trigger">Program Pelayanan <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mobile-accordion-panel">
+        <a href="program.html#rumah-kasih">Rumah Kasih</a>
+        <a href="program.html#rumah-ceria">Rumah Ceria</a>
+        <a href="misi-kemanusiaan.html">Misi Kemanusiaan</a>
+      </div>
+    </div>
+    <a href="testimoni.html">Testimoni</a>
+    <a href="kontak.html">Kontak &amp; Donasi</a>
+    <a href="kontak.html" class="btn btn-navy btn-block">Dukung gerakan</a>
   </nav>
 </header>
 
@@ -74,11 +98,11 @@
         <h1>Kasih yang <em>bergerak</em>,<br>harapan yang bertumbuh.</h1>
         <p class="lead">Yayasan Sungai Kasih hadir mendampingi anak, keluarga, dan komunitas Indonesia melalui pendidikan, kesehatan, pelayanan sosial, serta respons bencana yang bergerak cepat ke titik yang paling membutuhkan.</p>
         <div class="hero-cta">
-          <a href="#program" class="btn btn-gold">
+          <a href="program.html" class="btn btn-gold">
             Lihat pelayanan kami
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </a>
-          <a href="#kontak" class="btn btn-outline-dark">Saya ingin mendukung</a>
+          <a href="kontak.html" class="btn btn-outline-dark">Saya ingin mendukung</a>
         </div>
         <div class="hero-since">Melayani sejak tahun 2010</div>
       </div>
@@ -142,6 +166,11 @@
             <p>Kami bermimpi menghadirkan 500 Rumah Ceria di seluruh wilayah Indonesia, menjangkau lebih banyak anak.</p>
           </div>
         </div>
+
+        <a href="tentang-kami.html" class="program-link" style="color:var(--navy-900); margin-top:28px;">
+          Baca sejarah lengkap &amp; Visi Misi kami
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -157,14 +186,14 @@
         <p class="lede">Pelayanan kami dirancang bersama komunitas, menyentuh kebutuhan hari ini dan menyiapkan masa depan anak-anak Indonesia.</p>
       </div>
 
-      <div class="program-grid" data-reveal-group>
+      <div class="program-grid program-grid-3" data-reveal-group>
         <article class="program-card navy" style="--i:0">
           <div class="ring" aria-hidden="true"></div>
           <span class="program-tag">01 · Pontianak</span>
           <h3>Rumah Kasih</h3>
           <p>Tempat anak-anak belajar dan dibentuk karakternya. Pendidikan gratis yang berjalan dengan kasih, disiplin, dan harapan, menumbuhkan rasa hormat, semangat belajar, dan iman.</p>
           <span class="program-meta">Pendidikan · Karakter · Komunitas</span>
-          <a href="#kontak" class="program-link">
+          <a href="program.html#rumah-kasih" class="program-link">
             Kenali pelayanan
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
@@ -176,8 +205,20 @@
           <h3>Rumah Ceria</h3>
           <p>Bimbingan belajar dan Hari Ceria yang dijalankan di rumah warga, realisasi visi "jemput bola" sejak 2017. Anak-anak menemukan kegembiraan belajar, perhatian, dan keberanian untuk bermimpi.</p>
           <span class="program-meta">30–50 anak aktif di setiap Rumah Ceria</span>
-          <a href="#kontak" class="program-link">
+          <a href="program.html#rumah-ceria" class="program-link">
             Kenali pelayanan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="program-card navy" style="--i:2">
+          <div class="ring" aria-hidden="true"></div>
+          <span class="program-tag">03 · Seluruh Indonesia</span>
+          <h3>Misi Kemanusiaan</h3>
+          <p>Terjun langsung ke titik bencana sejak gempa Nias 2005 — tanggap bencana, bakti sosial, dan pemberdayaan usaha sederhana bagi masyarakat terdampak.</p>
+          <span class="program-meta">22+ misi kemanusiaan sejak 2005</span>
+          <a href="misi-kemanusiaan.html" class="program-link">
+            Lihat riwayat lengkap
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </article>
@@ -204,14 +245,14 @@
     </div>
   </section>
 
-  <!-- ============ Berita & Kegiatan ============
+  <!-- ============ Misi Kemanusiaan Terkini ============
        Cara update: duplikat satu blok <article class="news-card">...</article>,
        ganti tag/tanggal/judul/isi/kode donasi. Urutkan terbaru di paling atas. -->
   <section class="section on-paper" id="berita">
     <div class="container">
       <div class="section-head" data-reveal>
         <div>
-          <span class="kicker">03 / Berita &amp; kegiatan</span>
+          <span class="kicker">03 / Misi Kemanusiaan terkini</span>
           <h2>Yang sedang kami lakukan.</h2>
         </div>
         <p class="lede">Kabar terbaru dari lapangan, kami perbarui setiap ada perkembangan.</p>
@@ -277,6 +318,13 @@
           </div>
         </article>
         -->
+      </div>
+
+      <div style="text-align:center; margin-top:36px">
+        <a href="misi-kemanusiaan.html" class="btn btn-outline-navy">
+          Lihat riwayat lengkap Misi Kemanusiaan
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -370,83 +418,55 @@
     </div>
   </section>
 
-  <!-- ============ Kontak ============ -->
-  <section class="section on-mist" id="kontak">
-    <div class="container contact-grid">
-      <div class="contact-copy" data-reveal>
-        <span class="kicker">06 / Mari terhubung</span>
-        <h2>Ada banyak cara untuk ikut hadir.</h2>
-        <p>Ingin menjadi donatur, relawan, mitra pelayanan, atau sekadar bertanya lebih jauh? Sekretariat kami dengan senang hati mendengarkan.</p>
+  <!-- ============ Testimoni teaser ============ -->
+  <section class="section on-mist" id="testimoni">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <div>
+          <span class="kicker">06 / Testimoni</span>
+          <h2>Cerita dari mereka yang merasakan langsung.</h2>
+        </div>
+        <p class="lede">Dari guru pengajar hingga anak didik di Rumah Kasih.</p>
+      </div>
 
-        <ul class="contact-list">
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0119 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg></span>
-            <a class="addr" href="https://www.google.com/maps/dir/?api=1&destination=Kirana+Two+Office+Tower%2C+Jl.+Boulevard+Timur+No.+88%2C+Kelapa+Gading%2C+Jakarta+Utara" target="_blank" rel="noopener">Gading Kirana Two lantai 10A,<br>Jl. Boulevard Timur No. 88, Kelapa Gading,<br>Jakarta Utara 14250</a>
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .7 3a2 2 0 01-.4 2.1L8.1 10a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c1 .4 2 .6 3 .7a2 2 0 011.6 2z"/></svg></span>
-            <a href="tel:+622145874311">+62 21 4587 4311</a>
-          </li>
-          <li>
-            <span class="icon icon-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.36 5.07L2 22l5.2-1.36a9.9 9.9 0 004.84 1.24h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11a15.6 15.6 0 01-1.62-.6c-2.85-1.23-4.7-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94s.73-2.09.99-2.37c.26-.29.56-.36.75-.36h.53c.17 0 .4-.06.62.48.24.58.8 2 .87 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.33 1.44.29.14.46.12.62-.08.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.65.78 1.93.92.29.14.48.22.55.34.07.12.07.7-.17 1.38z"/></svg></span>
-            <a href="https://wa.me/6281286861634" target="_blank" rel="noopener">+62 812 8686 1634</a>
-          </li>
-          <li>
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke="none"/><path d="M4 6l8 7 8-7M4 18V6h16v12H4z"/></svg></span>
-            <a href="mailto:info@yayasansungaikasih.com">info@yayasansungaikasih.com</a>
-          </li>
-        </ul>
-
-        <div class="social-row">
-          <a href="https://www.instagram.com/yayasansungaikasih" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-            @yayasansungaikasih
-          </a>
-          <a href="https://www.google.com/search?q=yayasan+sungai+kasih" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="16" height="16"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.07 5.07 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.85A10.99 10.99 0 0012 23z"/><path fill="#FBBC05" d="M5.84 14.09A6.6 6.6 0 015.5 12c0-.73.13-1.43.34-2.09V7.06H2.18A10.99 10.99 0 001 12c0 1.77.42 3.45 1.18 4.94l3.66-2.85z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a10.99 10.99 0 00-9.82 6.06l3.66 2.85c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            Cari di Google
-          </a>
+      <div class="testi-grid" data-reveal-group>
+        <div class="testi-card">
+          <p class="quote">Sejak pertama kali mengajar sampai hari ini saya melihat ada perubahan yang sangat signifikan dari anak-anak di Rumah Kasih. Ada sukacita yang luar biasa melihat mereka semakin bertumbuh dan memiliki impian suatu hari kelak menjadi pemimpin-pemimpin yang dapat memuliakan Tuhan.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">F</div>
+            <div><strong>Fransina</strong><span>Guru Bahasa Inggris, Rumah Kasih Pontianak</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p class="quote">Waktu pertama kali masuk Rumah Kasih saya merasa nyaman. Saya senang bisa mengenal Tuhan dan belajar bahasa Inggris dan Mandarin gratis. Cita-cita saya setelah besar ingin menjadi pengusaha.</p>
+          <div class="testi-person">
+            <div class="testi-avatar">AC</div>
+            <div><strong>A Chien</strong><span>Anak didik, Rumah Kasih Pontianak</span></div>
+          </div>
         </div>
       </div>
 
-      <div class="contact-card" data-reveal>
-        <h3>Mulai percakapan.</h3>
-        <p>Ceritakan bagaimana Anda ingin berjalan bersama kami.</p>
+      <div style="text-align:center; margin-top:36px">
+        <a href="testimoni.html" class="btn btn-outline-navy">
+          Baca semua testimoni
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-success" id="formSuccess">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
-          Terima kasih! Kami membuka WhatsApp dengan pesan Anda yang sudah terisi, tinggal tekan kirim di sana.
-        </div>
-
-        <form id="contactForm" novalidate>
-          <div class="form-field">
-            <label for="nama">Nama</label>
-            <input id="nama" name="nama" type="text" placeholder="Nama lengkap" required />
-          </div>
-          <div class="form-field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="Alamat email" required />
-          </div>
-          <div class="form-field">
-            <label for="topik">Saya tertarik dengan</label>
-            <select id="topik" name="topik">
-              <option>Menjadi donatur rutin</option>
-              <option>Mendukung respons bencana &amp; kemanusiaan</option>
-              <option>Mendukung program pendidikan anak</option>
-              <option>Menjadi relawan</option>
-              <option>Kemitraan / lainnya</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="pesan">Pesan</label>
-            <textarea id="pesan" name="pesan" placeholder="Saya ingin..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-gold btn-block">
-            Kirim via WhatsApp
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5 5 9c0 1.5.4 2.9 1.2 4.1L5 18l5.1-1.1c1.2.7 2.5 1.1 3.9 1.1 4 0 7-3 7-7s-3-9-9-9z"/><path d="M9 8.5c.2 2.5 2 4.3 4.5 4.5"/></svg>
-          </button>
-          <p class="form-note">Pesan akan terisi otomatis dan dikirim ke WhatsApp Sekretariat (+62 812 8686 1634)</p>
-        </form>
+  <!-- ============ CTA Kontak & Donasi ============ -->
+  <section class="section on-dark">
+    <div class="container" style="text-align:center">
+      <span class="kicker kicker-on-dark" style="justify-content:center">07 / Mari terhubung</span>
+      <h2 style="color:#fff; font-size:clamp(28px,3.4vw,42px); margin:16px 0 18px;">Ada banyak cara untuk ikut hadir.</h2>
+      <p style="color:#b9c7d8; max-width:560px; margin:0 auto 32px; font-size:16px; line-height:1.75;">Ingin menjadi donatur, relawan, mitra pelayanan, atau sekadar bertanya lebih jauh? Sekretariat kami dengan senang hati mendengarkan.</p>
+      <div class="hero-cta" style="justify-content:center">
+        <a href="kontak.html#donasi" class="btn btn-gold">
+          Donasi sekarang
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+        <a href="kontak.html" class="btn btn-outline-dark">Hubungi kami</a>
       </div>
     </div>
   </section>
@@ -458,8 +478,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#top" class="brand">
-          <img src="assets/img/logo.svg" width="38" height="28" alt="" />
+        <a href="index.html" class="brand">
           <span class="brand-word"><span class="l1">Yayasan</span><span class="l2">SUNGAI KASIH</span></span>
         </a>
         <p>Melayani dengan kasih. Menumbuhkan harapan. Bersama anak, keluarga, dan komunitas Indonesia sejak 2010.</p>
@@ -467,19 +486,18 @@
       <div class="footer-col">
         <h5>Jelajahi</h5>
         <ul>
-          <li><a href="#tentang">Tentang kami</a></li>
-          <li><a href="#program">Program</a></li>
-          <li><a href="#berita">Berita &amp; Kegiatan</a></li>
-          <li><a href="#pencapaian">Pencapaian</a></li>
-          <li><a href="#dokumentasi">Dokumentasi</a></li>
-          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tentang-kami.html">Tentang Kami</a></li>
+          <li><a href="program.html">Program Pelayanan</a></li>
+          <li><a href="misi-kemanusiaan.html">Misi Kemanusiaan</a></li>
+          <li><a href="testimoni.html">Testimoni</a></li>
+          <li><a href="kontak.html">Kontak &amp; Donasi</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Ikuti kami</h5>
         <ul>
           <li><a href="https://www.instagram.com/yayasansungaikasih" target="_blank" rel="noopener">@yayasansungaikasih</a></li>
-          <li><a href="https://www.instagram.com/rumahceria_ysk" target="_blank" rel="noopener">@rumahceria_ysk</a></li>
           <li><a href="mailto:info@yayasansungaikasih.com">info@yayasansungaikasih.com</a></li>
         </ul>
       </div>
