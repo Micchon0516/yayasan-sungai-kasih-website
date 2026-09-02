@@ -96,6 +96,17 @@ section { position: relative; }
 }
 .on-dark .kicker, .kicker-on-dark { color: var(--teal-300); background: rgba(127,196,189,.15); }
 
+.cta-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 16.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--teal-300);
+  margin-bottom: 4px;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
