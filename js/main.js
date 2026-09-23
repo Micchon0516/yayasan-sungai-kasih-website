@@ -204,16 +204,21 @@
     });
   });
 
-  /* ---------------- News card "Baca detail terkini" toggle ---------------- */
-  document.querySelectorAll(".news-more").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const card = btn.closest(".news-card");
-      const detail = card.querySelector(".news-detail");
-      if (!detail) return;
-      const willOpen = !detail.classList.contains("open");
-      detail.classList.toggle("open", willOpen);
-      btn.setAttribute("aria-expanded", String(willOpen));
-      btn.lastChild.textContent = willOpen ? " Tutup" : " Baca detail terkini";
+  /* ---------------- News card "Baca detail terkini" toggle (top + bottom buttons stay in sync) ---------------- */
+  document.querySelectorAll(".news-card").forEach((card) => {
+    const detail = card.querySelector(".news-detail");
+    const toggleBtns = card.querySelectorAll(".news-more");
+    if (!detail || !toggleBtns.length) return;
+    toggleBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const willOpen = !detail.classList.contains("open");
+        detail.classList.toggle("open", willOpen);
+        toggleBtns.forEach((b) => {
+          b.setAttribute("aria-expanded", String(willOpen));
+          b.lastChild.textContent = willOpen ? " Tutup" : " Baca detail terkini";
+        });
+        if (!willOpen) card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
     });
   });
 
@@ -245,6 +250,21 @@
       );
       imgs.forEach((img) => obs.observe(img));
     }
+
+    const prevBtn = gallery.querySelector(".swipe-prev");
+    const nextBtn = gallery.querySelector(".swipe-next");
+    function slideWidth() {
+      return imgs[0].getBoundingClientRect().width || track.clientWidth || 1;
+    }
+    function currentIndex() {
+      return Math.round(track.scrollLeft / slideWidth());
+    }
+    function goTo(i) {
+      const clamped = Math.max(0, Math.min(imgs.length - 1, i));
+      track.scrollTo({ left: clamped * slideWidth(), behavior: "smooth" });
+    }
+    if (prevBtn) prevBtn.addEventListener("click", () => goTo(currentIndex() - 1));
+    if (nextBtn) nextBtn.addEventListener("click", () => goTo(currentIndex() + 1));
   });
 
   /* ---------------- Back to top ---------------- */
