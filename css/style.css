@@ -650,6 +650,7 @@ section { position: relative; }
 .news-detail.open { display: block; margin-top: -4px; }
 .news-detail p { font-size: 13.5px; }
 .news-more-bottom { margin: 4px 0 18px; }
+.news-more-top[aria-expanded="true"] { display: none; }
 .news-donate {
   display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
   padding-top: 16px; border-top: 1px dashed rgba(18,49,86,.15);
