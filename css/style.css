@@ -594,6 +594,22 @@ section { position: relative; }
 .news-card.accent-teal { border-left-color: var(--teal-500); }
 .news-media { flex-shrink: 0; width: 320px; align-self: stretch; }
 .news-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---------- Swipeable photo gallery (news-media / blog cards) ---------- */
+.swipe-gallery { position: relative; width: 100%; height: 100%; }
+.swipe-track {
+  display: flex; width: 100%; height: 100%;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.swipe-track::-webkit-scrollbar { display: none; }
+.swipe-track img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; scroll-snap-align: start; }
+.swipe-dots {
+  position: absolute; bottom: 12px; left: 0; right: 0;
+  display: flex; justify-content: center; gap: 6px; pointer-events: none;
+}
+.swipe-dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.55); box-shadow: 0 0 0 1px rgba(0,0,0,.15); transition: background .2s ease, transform .2s ease; }
+.swipe-dots span.is-active { background: #fff; transform: scale(1.35); }
 .news-body { flex: 1; min-width: 0; padding: 30px 34px; }
 .news-credit { font-size: 11px; color: rgba(18,49,86,.45); margin: 12px 0 0; }
 .news-top { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 12px; flex-wrap: wrap; }
@@ -607,6 +623,16 @@ section { position: relative; }
 .news-card h3 { font-size: clamp(19px, 2.1vw, 23px); color: var(--navy-900); margin-bottom: 10px; }
 .news-card p { font-size: 14.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 18px; text-align: justify; }
 .news-card p strong { color: var(--navy-900); }
+.news-more {
+  display: inline-flex; align-items: center; gap: 6px; margin: -6px 0 16px;
+  font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; color: var(--teal-700);
+  background: none; border: none; cursor: pointer; padding: 0;
+}
+.news-more svg { width: 14px; height: 14px; transition: transform .2s var(--ease); }
+.news-more[aria-expanded="true"] svg { transform: rotate(90deg); }
+.news-detail { display: none; }
+.news-detail.open { display: block; margin-top: -4px; }
+.news-detail p { font-size: 13.5px; }
 .news-donate {
   display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
   padding-top: 16px; border-top: 1px dashed rgba(18,49,86,.15);

@@ -204,6 +204,49 @@
     });
   });
 
+  /* ---------------- News card "Baca detail terkini" toggle ---------------- */
+  document.querySelectorAll(".news-more").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".news-card");
+      const detail = card.querySelector(".news-detail");
+      if (!detail) return;
+      const willOpen = !detail.classList.contains("open");
+      detail.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", String(willOpen));
+      btn.lastChild.textContent = willOpen ? " Tutup" : " Baca detail terkini";
+    });
+  });
+
+  /* ---------------- Swipeable photo gallery (dots follow scroll position) ---------------- */
+  document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+    const track = gallery.querySelector(".swipe-track");
+    const dotsWrap = gallery.querySelector(".swipe-dots");
+    const imgs = track ? Array.from(track.querySelectorAll("img")) : [];
+    if (!track || !dotsWrap || imgs.length <= 1) return;
+
+    imgs.forEach((_, i) => {
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("is-active");
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    if ("IntersectionObserver" in window) {
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const idx = imgs.indexOf(entry.target);
+              dots.forEach((d, i) => d.classList.toggle("is-active", i === idx));
+            }
+          });
+        },
+        { root: track, threshold: 0.6 }
+      );
+      imgs.forEach((img) => obs.observe(img));
+    }
+  });
+
   /* ---------------- Back to top ---------------- */
   fabTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 })();
