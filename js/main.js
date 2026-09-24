@@ -260,8 +260,8 @@
       return Math.round(track.scrollLeft / slideWidth());
     }
     function goTo(i) {
-      const clamped = Math.max(0, Math.min(imgs.length - 1, i));
-      track.scrollTo({ left: clamped * slideWidth(), behavior: "smooth" });
+      const wrapped = (i + imgs.length) % imgs.length;
+      track.scrollTo({ left: wrapped * slideWidth(), behavior: "smooth" });
     }
     if (prevBtn) prevBtn.addEventListener("click", () => goTo(currentIndex() - 1));
     if (nextBtn) nextBtn.addEventListener("click", () => goTo(currentIndex() + 1));
